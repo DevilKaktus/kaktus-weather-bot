@@ -1,12 +1,8 @@
 import TelegramApi from 'node-telegram-bot-api';
 import Fetch from 'node-fetch';
-
-const TOKEN = '5727566137:AAHO43LNq7ePTz2lHbtFG6P7R3bg80VPMtI';
-const API = 'http://45.146.166.156:5000/';
+import { TOKEN, API } from './config/config'; //config.js must contain token and link to api
 
 const bot = new TelegramApi(TOKEN, { polling: true });
-
-
 
 bot.onText(/\/current_weather/, msg => {
   const text = msg.text;
