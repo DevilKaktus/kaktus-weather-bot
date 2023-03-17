@@ -1,6 +1,6 @@
 import TelegramApi from 'node-telegram-bot-api';
 import Fetch from 'node-fetch';
-import { TOKEN, API } from './config/config'; //config.js must contain token and link to api
+import { TOKEN, API } from './config/config.js'; //config.js must contain token and link to api
 
 const bot = new TelegramApi(TOKEN, { polling: true });
 
